@@ -1,81 +1,198 @@
+/* Grundlegendes Styling für den gesamten Body */
 body {
-    margin: 0;
-    padding: 0;
-    background: white;
-    font-family: 'Nunito', sans-serif;  
-  }
-  
-  #app {
+  margin: 0;
+  padding: 0;
+  background: white;
+  font-family: 'Nunito', sans-serif;  
+}
+
+/* App-Container für volle Höhe */
+#app {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Hintergrundbild und Zentrierung auf dem Login-Screen */
+.screen {
+  height: 100vh;
+  background-image: url("images/Log_In/illustration.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 30px 20px;
+  text-align: center;
+  color: white;
+}
+
+/* Container für die Login-Buttons */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  align-items: center;
+  margin-top: 7px;
+}
+
+/* Basis-Button-Design */
+.button {
+  width: 320px;
+  height: 55px;
+  padding: 14px;
+  margin: 10 px 0; /* Achtung: "10 px" → sollte "10px" sein */
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Stil für "Sign Up"-Button */
+.SignUp {
+  background-color: #98B3B9;
+  color: black;
+}
+
+.SignUp:active {
+  background-color: #7fa1a7; /* dunklere Farbe beim Klicken */
+}
+
+/* Stil für "Log In"-Button */
+.LogIn {
+  background-color: white;
+  color: black;
+}
+
+.LogIn:active {
+  background-color: #ddd; /* hellgraue Farbe beim Klicken */
+}
+
+/* Slogan unter den Buttons */
+.slogan {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Zum Ausblenden von Screens */
+.hidden {
+  display: none;
+}
+
+/* Hauptbildschirm nach dem Login */
+.startScreen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Obere Leiste mit Avatar und Datum */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+/* Avatar-Button ohne Rahmen */
+.avatar-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Profilbild rund darstellen */
+.avatar-button img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* Datum zentriert in der Topbar */
+.date-info {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding-top: 35px;
+}
+
+.date-info h2 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.date-info p {
+  margin: 4px 0 0 0; /* nur oberer Abstand */
+  font-size: 18px;
+}
+
+/* Info zur Anzahl der Aufgaben */
+.task-info {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 20px auto;
+  line-height: 1.5;
+  max-width: 320px;
+  padding: 0 60px;
+  word-wrap: break-word;
+}
+
+/* Zahl der Aufgaben farblich hervorheben */
+.task-count {
+  color: #FD9679;
+  font-weight: 600;
+}
+
+/* Button für die To-Do-Liste */
+.todo-button {
+  background-color: #cbdfe3;       /* heller Blau-Ton */
+  color: #333;                     /* dunkler Text */
+  border: none;
+  border-radius: 12px;
+  padding: 14px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 90%;
+  max-width: 320px;
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* sanfter Schatten */
+  transition: background-color 0.2s ease;
+}
+
+.todo-button:active {
+  background-color: #b9d3d7; /* dunkler beim Klick */
+}
+
+/* Container für das Katzenbild – zentriert */
+.cat-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive Design für größere Bildschirme */
+@media (min-width: 600px) {
+  body {
     max-width: 400px;
-    height: 100vh;
     margin: 0 auto;
-    overflow: hidden;
   }
-  .screen {
-    height: 100vh;
-    background-image: url("images/Log_In/illustration.png");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 30px 20px;
-    text-align: center;
-    color: white;
-  }
-  .button-container{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    width: 100%;
-    align-items: center;
-    margin-top: 7px;
-  }
-  .button{
-    width: 320px;
-    height: 55px;
-    padding: 14px;
-    margin: 10 px 0;
-    border: none;
-    border-radius: 12px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  .SignUp {
-    background-color: #98B3B9;
-    color: black;
-  }
-  .SignUp:active {
-    background-color: #7fa1a7; /* более тёмный оттенок при нажатии */
-  }
-  
-  .LogIn {
-    background-color: white;
-    color: black;
-  }
-  .LogIn:active {
-    background-color: #ddd; /* светло-серый фон при нажатии */
-  }
-  .slogan {
-    margin-top: 15px;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  .hidden {
-    display: none;
-  }
-  .top-bar {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 20px;
-    gap: 15px;
-  }
-  .avatar-button{
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-  }
-.avatar-button img{}
+}
+
+

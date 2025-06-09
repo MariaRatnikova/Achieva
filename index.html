@@ -4,35 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Achieva</title>
+
+  <!-- Externe CSS-Datei für das Styling -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Manifest für PWA-Funktionalität -->
   <link rel="manifest" href="manifest.json">
+
+  <!-- Google Fonts (Nunito-Schriftart) -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-        <div id="loginScreen" class="screen hidden">
-            <div class="logo"> 
-                <img src="images/Log_In/logo.svg" alt="Achieva Logo">
-            </div>
-            <div class="button-container"> 
-                <button class="button SignUp">Sign up</button>
-                <button class="button LogIn"> Log in</button></div>
-            <p class="slogan"> Motivated. Organized. Successful</p>
-        </div>
+  <!-- Login-Bildschirm (wird am Anfang versteckt) -->
+  <div id="loginScreen" class="screen hidden">
 
-        <div class="startScreen">
-            <div class="top-bar">
-                <button class="avatar-button">
-                    <img src="images/Start_Screen/Profil_button.svg">
-                </button>
-                <div class="date-info">
-                    <h2 id="dayName">Wednesday</h2>
-                    <p id="fullDate"> January 12, 2025</p>
-                </div>
-            </div>
-        </div>
-    
-      
+    <!-- Logo von Achieva -->
+    <div class="logo"> 
+      <img src="images/Log_In/logo.svg" alt="Achieva Logo">
+    </div>
 
+    <!-- Container für Anmelde-Buttons -->
+    <div class="button-container"> 
+      <button class="button SignUp">Sign up</button>
+      <button class="button LogIn">Log in</button>
+    </div>
+
+    <!-- Slogan unter den Buttons -->
+    <p class="slogan">Motivated. Organized. Successful</p>
+  </div>
+
+  <!-- Hauptbildschirm nach dem Login -->
+  <div class="startScreen">
+
+    <!-- Obere Leiste mit Profilbild und Datum -->
+    <div class="top-bar">
+
+      <!-- Button mit Profilbild -->
+      <button class="avatar-button">
+        <img src="images/Start_Screen/Profil_button.svg">
+      </button>
+
+      <!-- Datum (Wochentag und aktuelles Datum) -->
+      <div class="date-info">
+        <div class="spacer"></div>
+        <h2 id="dayName">Wednesday</h2>
+        <p id="fullDate">January 12, 2025</p>
+        <div class="spacer"></div>
+      </div>
+    </div>
+
+    <!-- Anzeige der Aufgabenanzahl und Text -->
+    <p class="task-info">
+      <span id="taskCount" class="task-count">0 tasks</span>
+      today – maybe time for a little break?
+    </p>
+
+    <!-- Button zum Öffnen der vollständigen To-Do-Liste -->
+    <button class="todo-button">Open full To-Do List</button>
+
+    <!-- Bild eines entspannten Katers bei Sonne -->
+    <div class="cat-wrapper">  
+      <img src="images/Start_Screen/cat-sun.png">
+    </div>
+
+  </div>
+
+  <!-- JavaScript-Datei zur Funktionalität -->
   <script src="script.js"></script>
 </body>
 </html>
