@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    font-family: 'Nunito', sans-serif;  
+  }
+  
+  #app {
+    max-width: 400px;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .screen {
+    height: 100vh;
+    background-image: url("images/Log_In/illustration.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 30px 20px;
+    text-align: center;
+    color: white;
+  }
+  .button-container{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    align-items: center;
+    margin-top: 7px;
+  }
+  .button{
+    width: 320px;
+    height: 55px;
+    padding: 14px;
+    margin: 10 px 0;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .SignUp {
+    background-color: #98B3B9;
+    color: black;
+  }
+  .SignUp:active {
+    background-color: #7fa1a7; /* более тёмный оттенок при нажатии */
+  }
+  
+  .LogIn {
+    background-color: white;
+    color: black;
+  }
+  .LogIn:active {
+    background-color: #ddd; /* светло-серый фон при нажатии */
+  }
+  .slogan {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .hidden {
+    display: none;
+  }
+  .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 15px;
+  }
+  .avatar-button{
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+.avatar-button img{}
