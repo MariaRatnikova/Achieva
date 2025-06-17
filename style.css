@@ -1,198 +1,419 @@
-/* Grundlegendes Styling für den gesamten Body */
-body {
-  margin: 0;
-  padding: 0;
-  background: white;
-  font-family: 'Nunito', sans-serif;  
-}
-
-/* App-Container für volle Höhe */
-#app {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-/* Hintergrundbild und Zentrierung auf dem Login-Screen */
-.screen {
-  height: 100vh;
-  background-image: url("images/Log_In/illustration.png");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 30px 20px;
-  text-align: center;
-  color: white;
-}
-
-/* Container für die Login-Buttons */
-.button-container {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  width: 100%;
-  align-items: center;
-  margin-top: 7px;
-}
-
-/* Basis-Button-Design */
-.button {
-  width: 320px;
-  height: 55px;
-  padding: 14px;
-  margin: 10 px 0; /* Achtung: "10 px" → sollte "10px" sein */
-  border: none;
-  border-radius: 12px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-/* Stil für "Sign Up"-Button */
-.SignUp {
-  background-color: #98B3B9;
-  color: black;
-}
-
-.SignUp:active {
-  background-color: #7fa1a7; /* dunklere Farbe beim Klicken */
-}
-
-/* Stil für "Log In"-Button */
-.LogIn {
-  background-color: white;
-  color: black;
-}
-
-.LogIn:active {
-  background-color: #ddd; /* hellgraue Farbe beim Klicken */
-}
-
-/* Slogan unter den Buttons */
-.slogan {
-  margin-top: 15px;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-/* Zum Ausblenden von Screens */
-.hidden {
-  display: none;
-}
-
-/* Hauptbildschirm nach dem Login */
-.startScreen {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Obere Leiste mit Avatar und Datum */
-.top-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: white;
-  padding: 20px;
-  border-radius: 12px;
-  width: 90%;
-  max-width: 400px;
-  position: relative;
-}
-
-/* Avatar-Button ohne Rahmen */
-.avatar-button {
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-}
-
-/* Profilbild rund darstellen */
-.avatar-button img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
-
-/* Datum zentriert in der Topbar */
-.date-info {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  padding-top: 35px;
-}
-
-.date-info h2 {
-  margin: 0;
-  font-size: 25px;
-  font-weight: 400;
-}
-
-.date-info p {
-  margin: 4px 0 0 0; /* nur oberer Abstand */
-  font-size: 18px;
-}
-
-/* Info zur Anzahl der Aufgaben */
-.task-info {
-  text-align: center;
-  font-size: 25px;
-  font-weight: bold;
-  margin: 20px auto;
-  line-height: 1.5;
-  max-width: 320px;
-  padding: 0 60px;
-  word-wrap: break-word;
-}
-
-/* Zahl der Aufgaben farblich hervorheben */
-.task-count {
-  color: #FD9679;
-  font-weight: 600;
-}
-
-/* Button für die To-Do-Liste */
-.todo-button {
-  background-color: #cbdfe3;       /* heller Blau-Ton */
-  color: #333;                     /* dunkler Text */
-  border: none;
-  border-radius: 12px;
-  padding: 14px 20px;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-  width: 90%;
-  max-width: 320px;
-  margin: 20px auto;
-  display: block;
-  text-align: center;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* sanfter Schatten */
-  transition: background-color 0.2s ease;
-}
-
-.todo-button:active {
-  background-color: #b9d3d7; /* dunkler beim Klick */
-}
-
-/* Container für das Katzenbild – zentriert */
-.cat-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Responsive Design für größere Bildschirme */
-@media (min-width: 600px) {
-  body {
-    max-width: 400px;
-    margin: 0 auto;
+/* ==============================================================
+   1) GRUNDLAYOUT
+   ============================================================== */
+   :root{
+    --box-bg:   #cbdfe3;
+    --box-radius: 16px;
+    --accent:   #fd9679;
+    --text-dark:#333;
+    font-family:'Nunito',sans-serif;
   }
-}
 
+  body{
+    margin:0;
+    padding:0;
+    background:#fff;
+    font-family:'Nunito',sans-serif;
+    max-width: 393px;
+  }
+  
+  /* App-Wrapper (falls benötigt) */
+  #app{
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+  }
+  
+  /* Screens aus-/einblenden */
+  .hidden{ display:none!important; }
+  
+  /* ==============================================================
+     2) LOGIN-SCREEN
+     ============================================================== */
+  .LogIn-screen{
+    height:100vh;
+    max-height:844px;
+    background:url("images/Log_In/illustration.png") center/cover no-repeat;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-end;
+    padding:30px 20px;
+    text-align:center;
+    color:#fff;
+  }
+  
+  .button-container{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    width:100%;
+    align-items:center;
+   
+  }
+  
+  .button{
+    width:320px;
+    height:55px;
+    padding:14px;
+    margin:10px 0;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    cursor:pointer;
+    box-shadow:0 1px 3px rgba(0,0,0,.05);
+  }
+  
+  .SignUp{ background:#98B3B9;color:#000; }
+  .SignUp:active{ background:#7fa1a7; }
+  
+  .LogIn{ background:#fff;color:#000; }
+  .LogIn:active{ background:#ddd; }
+  
+  .slogan{ margin-top:5px;font-size:16px;font-weight:bold; }
+  
+  /* ==============================================================
+     3) START-SCREEN
+     ============================================================== */
+  .startScreen{
+    height:100vh;
+    max-height:844px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background:#FAF9F8;
+    overflow-y:auto;
+  }
+  
+  /* Top-Bar (Avatar + Datum) */
+  .top-bar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px;
+    border-radius:12px;
+    width:90%;
+    max-width:400px;
+    position:relative;
+  }
+  
+  .avatar-button{
+    background:none;
+    border:none;
+    padding:0;
+    cursor:pointer;
+  }
+  .avatar-button img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+  }
+  
+  /* zentrisches Datum */
+  .date-info{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    text-align:center;
+    padding-top:35px;
+  }
+  .date-info h2{ margin:0;font-size:25px;font-weight:400; }
+  .date-info p { margin:4px 0 0;font-size:18px; }
+  
+  /* Titel für andere Screens (z. B. To-Do) */
+  .name-screen{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    text-align:center;
+    padding-top:7px;
+  }
+  .name-screen h2{ margin:0;font-size:25px;font-weight:400; }
+  
+  /* Task-Info */
+  .task-info{
+    text-align:center;
+    font-size:25px;
+    font-weight:bold;
+    margin:20px auto;
+    line-height:1.5;
+    max-width:320px;
+    padding:0 60px;
+    word-wrap:break-word;
+  }
+  .task-count{ color:#FD9679;font-weight:600; }
+  
+  /* Button „Open To-Do List“ */
+  .todo-button{
+    background:#cbdfe3;
+    color:#333;
+    border:none;
+    border-radius:12px;
+    padding:14px 20px;
+    font-size:18px;
+    font-weight:500;
+    width:335px;
+    margin:20px auto;
+    display:block;
+    text-align:center;
+    box-shadow:0 1px 3px rgba(0,0,0,.05);
+    transition:background-color .2s;
+  }
+  .todo-button:active{ background:#b9d3d7; }
+  
+  /* Katzengrafik */
+  .cat-wrapper{ display:flex;justify-content:center; }
+  .cat-wrapper{ }
+  
+  
+  /* Upcoming-Events */
+  .events-block{ width:335px;margin:40px auto 0; }
+  .events-title{ font-size:18px;font-weight:600;margin:0 0 12px; }
+  .events-card{
+    background:#fff;
+    border-radius:16px;
+    padding:20px 20px 7px;
+    box-shadow:0 1px 3px rgba(0,0,0,.06);
+  }
+  .event{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:14px;
+    margin-bottom:14px;
+  }
+  .event:last-child{ margin-bottom:0; }
+  .event img{ width:20px;height:20px;opacity:.85; }
+  
+  /* ==============================================================
+     4) TO-DO-SCREEN
+     ============================================================== */
+  .ToDo-Screen{
+    height:100vh;
+    max-height:844px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background:#fff;
+    overflow-y:auto;
+  }
+  
+  /* Haupt-Box je Kategorie */
+  .todo-box{
+    width:330px;
+    height:420px;
+    background:var(--box-bg);
+    border-radius:var(--box-radius);
+    padding:24px;
+    box-sizing:border-box;
+    margin-bottom: 20px;
+  }
+  
+  /* Select (Kategorie) */
+  .category-select{
+    width:100%;
+    padding:8px 10px;
+    border:none;
+    border-radius:8px;
+    font-weight:lighter;
+    background:#98B3B9;
+    text-align:center;
+    font-size:16px;
+  }
+  
+  /* Überschriften „To Do/D­one“ */
+  .title{ text-align:center;margin:14px 0 10px;font-size:20px;font-weight:700; }
+  
+  /* Task-Listen */
+  .task-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+  }
+  
+  /* Task-Zeile */
+  .task-list li label{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+  }
+  .task-wrap{ display:flex;flex-direction:column;line-height:1.15; }
+  
+  .task-list input[type="checkbox"]{
+    appearance:none;
+    width:18px;height:18px;
+    border:2px solid var(--accent);
+    border-radius:3px;
+    cursor:pointer;
+    position:relative;
+    flex-shrink:0;
+    margin-top:3px;
+  }
+  .task-list input[type="checkbox"]:checked{
+    background:var(--accent);
+  }
+  .task-list input[type="checkbox"]:checked::after{
+    content:'';
+    position:absolute;
+    top:2px;left:5px;
+    width:4px;height:8px;
+    border:2px solid #fff;
+    border-top:none;border-left:none;
+    transform:rotate(45deg);
+  }
+  
+  .task-text{ margin:0 4px;font-weight:600; }
+  .task-date{ font-size:11px;margin:4px 0 0 15px;color:#567176; }
+  
+  li.done .task-text{ color:#567176;text-decoration:line-through; }
+  
+  /* Button „Add Category“ */
+  .add-cat-btn{
+    width:330px;
+    padding:14px 0;
+    background:#4a646c;
+    color:#fff;
+    border:none;
+    border-radius:7px;
+    font-weight:700;
+    cursor:pointer;
+    margin-bottom: 40px;
+    
+  }
+  .add-cat-btn:active{ background:#263232; }
+  
+  /* Floating-Action-Button */
+  .fab{
+    position:fixed;
+    bottom:90px;
+    right:24px;
+    width:56px;height:56px;
+    border-radius:50%;
+    font-size:34px;
+    background:var(--accent);
+    color:#fff;
+    border:none;
+    display:flex;justify-content:center;align-items:center;
+    box-shadow:0 2px 6px rgba(0,0,0,.25);
+    cursor:pointer;
+  }
+  /* kleines Popup-Menü für den FAB */
+.fab-menu{
+  position:fixed;
+  right:24px;
+  bottom:155px;           /* 56px FAB + 35px Abstand */
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  z-index:250;
+  
+}
+.fab-menu button{
+  background:#4a646c;color:#fff;
+  border:none;
+  border-radius:7px;
+  padding:8px 14px;
+  font-size:14px;
+  cursor:pointer;
+  text-align: left;
+  width: 120px; 
+}
+  /* ==============================================================
+     5) MODAL WINDOWS
+     ============================================================== */
+    .modal[open],
+    .modal:not(dialog) {
+    position:fixed;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:200;
+  }
+  .modal.hidden{ display:none; }
+  
+  /* Standard-Back-Drop für dialog-Elemente */
+  .modal::backdrop{ background:rgba(0,0,0,.35); }
+  
+  /* gemeinsame Karte */
+  .modal-content{
+    background:#cbdfe3;
+    width:300px;               /* default */
+    padding:24px 18px;
+    border-radius:16px;
+    box-sizing:border-box;
+  }
+  
+  /* Titel */
+  .modal-title{ margin:0 0 16px;font-size:16px; }
+  
+  /* Label inside Modal */
+  .modal label{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+    margin-bottom:14px;
+    font-size:12px;
+    font-weight:600;
+    color:#4a4a4a;
+  }
+  
+  /* Eingabefelder */
+  input[type=date], select{
+    width:100%;
+    padding:6px 8px;
+    border:1px solid #d4d4d4;
+    border-radius:4px;
+    font-size:14px;
+    font-family:inherit;
+  }
+  input[type=text]{
+    width: 93%;
+    padding:6px 8px;
+    border:1px solid #d4d4d4;
+    border-radius:4px;
+    font-size:14px;
+    font-family:inherit;
+
+  }
+  /* spezielles breiteres Feld für den Titel */
+  #taskTitle{ font-size:15px; }
+  
+  /* Deadline Wrapper */
+  .deadline-wrap{ display:flex; gap:6px; }
+  
+  /* Buttons in der Modal-Fußzeile */
+  .modal-actions{ display:flex;justify-content:space-between;margin-top:27px; }
+  .modal-btn{
+    flex:1;
+    padding:8px 0;
+    border:none;
+    border-radius:7px;
+    cursor:pointer;
+  }
+  .modal:not(dialog) { background: rgba(0,0,0,.35); backdrop-filter: blur(2px); }
+  .modal-btn.cancel{ background:#fff;color:#4a646c;border:1px solid #ccc;margin-right:8px; }
+  .modal-btn.create{ background:#4a646c;color:#fff; }
+  .fab-menu.hidden { display:none; }
+  /* Spezielles Styling für das kleinere „Add Category“-Dialog */
+  #catDlg::backdrop{ background:rgba(0,0,0,.4);backdrop-filter:blur(2px); }
+  #catDlg{ border:none;padding:0;background:transparent; }
+  #catDlg .modal-content{
+    width:260px;
+    height:200px;
+    padding:20px;
+    border-radius:20px;
+  }
+  #catName{ width:93%; }
+  
+  /* ==============================================================
+     6) MEDIA-QUERY Desktop
+     ============================================================== */
+  @media (min-width:600px){
+    body{ max-width:400px;margin:0 auto; }
+  }
+  
 

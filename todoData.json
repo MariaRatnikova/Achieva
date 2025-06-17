@@ -1,0 +1,81 @@
+{
+    "categories": [
+      {
+        "id": "cat-1",
+        "name": "Software Engineering",
+        "tasks": [
+          {
+            "id": "t1",
+            "text": "Write final project report",
+            "done": false,
+            "date": "2025-06-18"
+          },
+          {
+            "id": "t2",
+            "text": "Refactor API module",
+            "done": true,
+            "date": "2025-06-10",
+            "completedAt": "2025-06-10"
+          }
+        ]
+      },
+      {
+        "id": "cat-2",
+        "name": "University",
+        "tasks": [
+          {
+            "id": "t3",
+            "text": "Prepare for math exam",
+            "done": false,
+            "date": "2025-06-21"
+          },
+          {
+            "id": "t4",
+            "text": "Send email to professor",
+            "done": true,
+            "date": "2025-06-15",
+            "completedAt": "2025-06-15"
+          }
+        ]
+      },
+      {
+        "id": "cat-3",
+        "name": "Personal",
+        "tasks": [
+          {
+            "id": "t5",
+            "text": "Buy groceries",
+            "done": true,
+            "date": "2025-06-16",
+            "completedAt": "2025-06-16"
+          },
+          {
+            "id": "t6",
+            "text": "Read a chapter of a book",
+            "done": false,
+            "date": "2025-06-17"
+          }
+        ]
+      },
+      {
+        "id": "cat-4",
+        "name": "Fitness",
+        "tasks": [
+          {
+            "id": "t7",
+            "text": "Attend volleyball training",
+            "done": false,
+            "date": "2025-06-19"
+          },
+          {
+            "id": "t8",
+            "text": "Stretch for 15 minutes",
+            "done": true,
+            "date": "2025-06-16",
+            "completedAt": "2025-06-16"
+          }
+        ]
+      }
+    ]
+  }
+  

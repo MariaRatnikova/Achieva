@@ -1,0 +1,9 @@
+{
+    "name": "Achieva",
+    "short_name": "Achieva",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#98B3B9",
+    "icons": []
+  }
