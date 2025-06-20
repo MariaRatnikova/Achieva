@@ -163,7 +163,7 @@
   
   /* Katzengrafik */
   .cat-wrapper{ display:flex;justify-content:center; }
-  .cat-wrapper{ }
+ 
   
   
   /* Upcoming-Events */
@@ -299,7 +299,9 @@
     display:flex;justify-content:center;align-items:center;
     box-shadow:0 2px 6px rgba(0,0,0,.25);
     cursor:pointer;
+    z-index: 1000;
   }
+  
   /* kleines Popup-Menü für den FAB */
 .fab-menu{
   position:fixed;
@@ -308,7 +310,7 @@
   display:flex;
   flex-direction:column;
   gap:10px;
-  z-index:250;
+  z-index: 1000;;
   
 }
 .fab-menu button{
@@ -322,85 +324,127 @@
   width: 120px; 
 }
   /* ==============================================================
-     5) MODAL WINDOWS
-     ============================================================== */
-    .modal[open],
-    .modal:not(dialog) {
-    position:fixed;
-    inset:0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    z-index:200;
-  }
-  .modal.hidden{ display:none; }
-  
-  /* Standard-Back-Drop für dialog-Elemente */
-  .modal::backdrop{ background:rgba(0,0,0,.35); }
-  
-  /* gemeinsame Karte */
-  .modal-content{
-    background:#cbdfe3;
-    width:300px;               /* default */
-    padding:24px 18px;
-    border-radius:16px;
-    box-sizing:border-box;
-  }
-  
-  /* Titel */
-  .modal-title{ margin:0 0 16px;font-size:16px; }
-  
-  /* Label inside Modal */
-  .modal label{
-    display:flex;
-    flex-direction:column;
-    gap:4px;
-    margin-bottom:14px;
-    font-size:12px;
-    font-weight:600;
-    color:#4a4a4a;
-  }
-  
-  /* Eingabefelder */
-  input[type=date], select{
-    width:100%;
-    padding:6px 8px;
-    border:1px solid #d4d4d4;
-    border-radius:4px;
-    font-size:14px;
-    font-family:inherit;
-  }
-  input[type=text]{
-    width: 93%;
-    padding:6px 8px;
-    border:1px solid #d4d4d4;
-    border-radius:4px;
-    font-size:14px;
-    font-family:inherit;
+   5) MODAL WINDOWS
+   ============================================================== */
 
-  }
-  /* spezielles breiteres Feld für den Titel */
-  #taskTitle{ font-size:15px; }
-  
-  /* Deadline Wrapper */
-  .deadline-wrap{ display:flex; gap:6px; }
-  
-  /* Buttons in der Modal-Fußzeile */
-  .modal-actions{ display:flex;justify-content:space-between;margin-top:27px; }
-  .modal-btn{
-    flex:1;
-    padding:8px 0;
-    border:none;
-    border-radius:7px;
-    cursor:pointer;
-  }
-  .modal:not(dialog) { background: rgba(0,0,0,.35); backdrop-filter: blur(2px); }
-  .modal-btn.cancel{ background:#fff;color:#4a646c;border:1px solid #ccc;margin-right:8px; }
-  .modal-btn.create{ background:#4a646c;color:#fff; }
+/* Modale Fenster immer zentriert im Viewport */
+.modal[open],
+.modal:not(dialog) {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+.modal.hidden {
+  display: none;
+}
+
+/* Abgedunkelter Hintergrund bei geöffneter Modal */
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* Innenbereich der Modal (Karte) */
+.modal-content {
+  background: #cbdfe3;
+  width: 300px;
+  padding: 24px 18px;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+/* Titel der Modal */
+.modal-title {
+  margin: 0 0 16px;
+  font-size: 16px;
+}
+
+/* Label und Texteingaben im Formular */
+.modal label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4a4a4a;
+}
+
+/* Einheitliche Eingabefelder (Text, Datum, Zeit, Dropdown) */
+.modal input[type="text"],
+.modal input[type="date"],
+.modal input[type="time"],
+.modal select {
+  width: 100%;                  /* volle Breite innerhalb der Modal */
+  padding: 8px 10px;            /* gleichmäßige Innenabstände */
+  border: 1px solid #d4d4d4;    /* dezente Umrandung */
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+  box-sizing: border-box;       /* Padding wird bei Breite einberechnet */
+  background: #fff;
+}
+
+/* Optional: Titelfeld minimal größer */
+#taskTitle {
+  font-size: 15px;
+}
+
+/* Bereich für z. B. Deadline Start + End nebeneinander */
+.deadline-wrap {
+  display: flex;
+  gap: 6px;
+}
+
+/* Footer-Buttons in Modal */
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 27px;
+}
+
+.modal-btn {
+  flex: 1;
+  padding: 8px 0;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+/* Cancel-Button: helles Design */
+.modal-btn.cancel {
+  background: #fff;
+  color: #4a646c;
+  border: 1px solid #ccc;
+  margin-right: 8px;
+}
+
+/* Create-Button: dunkler Akzent */
+.modal-btn.create {
+  background: #4a646c;
+  color: #fff;
+}
+
+/* Optional: leichter Unschärfeeffekt bei Modalfenster */
+.modal:not(dialog) {
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(2px);
+}
   .fab-menu.hidden { display:none; }
   /* Spezielles Styling für das kleinere „Add Category“-Dialog */
   #catDlg::backdrop{ background:rgba(0,0,0,.4);backdrop-filter:blur(2px); }
-  #catDlg{ border:none;padding:0;background:transparent; }
+  #catDlg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    background: transparent;
+    padding: 0;
+    z-index: 200;
+  }
   #catDlg .modal-content{
     width:260px;
     height:200px;
@@ -415,5 +459,618 @@
   @media (min-width:600px){
     body{ max-width:400px;margin:0 auto; }
   }
+  * {
+    margin: 0;
+    padding: 0;
+  }
   
-
+  /* ───────────────────────────────
+     HAUPTSCREEN FÜR DEN KALENDER
+     • Füllt die komplette Viewport-Höhe,
+       aber nie mehr als 844 px (gängig bei
+       Smartphones wie iPhone 14 Pro).
+     • Flex-Kolonne, damit Header oben und
+       Task-Bereiche unten automatisch
+       verteilt werden.
+     • Hellbeiger Hintergrund als
+       Grundfarbe der App.
+     • Bei Überlauf kann senkrecht
+       gescrollt werden.
+  ──────────────────────────────── */
+  .CalenderScreen {
+    height: 100vh;
+    max-height: 844px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FAF9F8;
+    overflow-y: auto;
+  }
+  
+  /* Diese Container sollen niemals unter
+     Platzmangel schrumpfen, damit ihre
+     Inhalte nicht zusammengedrückt werden. */
+  .calenderBox,
+  .calendar-toggle,
+  .deadline-container,
+  .day-tabs {
+    flex-shrink: 0;
+  }
+  
+  /* ───────────────────────────────
+     KALENDER-WRAPPER
+     Zentriert den eigentlichen Kalender.
+  ──────────────────────────────── */
+  .calenderBox {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    color: rgb(0, 0, 0) !important;
+  }
+  
+  /* ───────────────────────────────
+     KALENDERKARTE
+     Weißes „Kärtchen“ mit sanften
+     Rundungen. 350 px Breite funktioniert
+     gut für die meisten Mobil-Displays.
+  ──────────────────────────────── */
+  .calendar-container {
+    background: #ffffff;
+    width: 350px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  /* ───────────────────────────────
+     HEADER DES KALENDERS
+     Enthält Monatsangabe + Pfeile.
+  ──────────────────────────────── */
+  .calendar-container header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    justify-content: space-between;
+  }
+  
+  /* Navigation (Pfeile) */
+  header .calendar-navigation {
+    display: flex;
+  }
+  
+  header .calendar-navigation span {
+    height: 30px;
+    width: 30px;
+    margin: 0 2px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    user-select: none;
+    color: #000000;
+    font-size: 1.4rem;
+  }
+  
+  .calendar-navigation span:last-child {
+    margin-right: -8px; /* optische Zentrierung */
+  }
+  
+  header .calendar-navigation span:hover {
+    background: #f2f2f2; /* sanfter Hover-Kreis */
+  }
+  
+  header .calendar-current-date {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  
+  /* ───────────────────────────────
+     KALENDER-BODY (Tage & Wochenköpfe)
+  ──────────────────────────────── */
+  .calendar-body {
+    padding: 5px 10px 10px;
+  }
+  
+  /* Basiskonfiguration der UL-Listen */
+  .calendar-body ul {
+    list-style: none;
+    flex-wrap: wrap;
+    display: flex;
+    text-align: center;
+  }
+  
+  /* Überschrift mit Wochentagen */
+  .calendar-body .calendar-weekdays {
+    border-bottom: 1px solid #E5E5E5;
+    padding-bottom: 8px;
+    margin: 8px 0;
+  }
+  
+  /* Liste der Tageszahlen */
+  .calendar-body .calendar-dates {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  /* Einzelnes Tagesfeld */
+  .calendar-body li {
+    width: calc(100% / 7);
+    height: 30px;
+    line-height: 30px;
+    font-size: 0.9rem;
+    color: #414141;
+    margin-top: 15px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  /* Kopfzeile (Sun, Mon, …) – ohne Hover */
+  .calendar-body .calendar-weekdays li {
+    cursor: default;
+    font-weight: 500;
+    font-size: 0.85rem;
+  }
+  
+  /* Graue, ausgeblendete Tage (voriger / nächster Monat) */
+  .calendar-dates li.inactive {
+    color: #aaa;
+    cursor: default;
+    opacity: 0.3;
+  }
+  
+  /* „Heute“ (aktuelles Datum) */
+  .calendar-dates li.active {
+    color: #FD9679 !important;
+    font-weight: 1000;
+  }
+  
+  /* Basis-Hintergrundkreis für jeden Tag
+     (dient als Hover- und Auswahl-Overlay) */
+  .calendar-dates li::before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Orangefarbener Ring um „Heute“ */
+  .calendar-dates li.active::before {
+    background: transparent;
+    border: 2px solid #FD9679;
+  }
+  
+  /* Hovereffekt für wählbare Tage */
+  .calendar-dates li:not(.active):not(.highlight):hover::before {
+    background: #76a4a1;
+  }
+  
+  /* Blau umrandeter, ausgewählter Tag */
+  .calendar-dates li.highlight {
+    background: transparent !important;
+    border: 2px solid #97b5ff !important;
+    border-radius: 50%;
+    position: relative;
+    z-index: 10;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: calc(100% / 7);
+  }
+  
+  /* ───────────────────────────────
+     W O C H E N A N S I C H T
+     Wird aktiv, sobald .week an
+     .calendar-container hängt.
+  ──────────────────────────────── */
+  
+  /* Kein doppelter Kreis bei „heute“ */
+  .calendar-container.week li.active::before {
+    content: none !important;
+  }
+  
+  /* Alles ohne Bullets, ohne Margin */
+  .calendar-container.week .calendar-dates,
+  .calendar-container.week .calendar-dates li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Kein Hover-Kreis im Wochenmodus */
+  .calendar-container.week
+  li:not(.inactive):not(.active):not(.highlight):hover::before {
+    content: none !important;
+  }
+  
+  /* Orange Umrandung (oval) um „heute“ */
+  .calendar-container.week li.active {
+    width: 42px;
+    height: 70px;
+    border: 2px solid #FD9679;
+    border-radius: 18px / 28px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  
+  /* Blau hinterlegter, vom User gewählter Tag */
+  .calendar-container.week li.highlight {
+    width: 42px;
+    height: 60px;
+    background: #cce6f9;
+    border-radius: 18px / 28px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Weicher Hover-Übergang */
+  .calendar-container.week
+  li:not(.inactive):not(.active):not(.highlight):hover {
+    background: #76a4a1;
+    border-radius: 18px / 28px;
+    transition: background 0.15s;
+  }
+  
+  /* Hover-Sicherheit: keine Kinder übermalen */
+  .calendar-container.week
+  li:not(.inactive):not(.active):not(.highlight):hover * {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  
+  /* Grundlayout in der Wochenansicht */
+  .calendar-container.week .calendar-weekdays {
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+  }
+  .calendar-container.week .calendar-dates {
+    display: flex;
+    justify-content: space-between;
+  }
+  .calendar-container.week .calendar-dates li {
+    width: 40px;
+    height: 56px;
+    margin: 0 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+  }
+  
+  /* Kleines Kürzel (S, M, T, …) */
+  .calendar-container.week .week-day {
+    font-size: .8rem;
+    color: #444;
+  }
+  
+  /* Standardmäßig ausgeblendet – nur Zahl sichtbar */
+  .calendar-container.week .calendar-dates .week-day {
+    display: none;
+  }
+  
+  /* Großgeschriebene Datumszahl */
+  .calendar-container.week .week-date {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  /* ───────────────────────────────
+     TOGGLE-SCHALTER (Monat/Woche)
+  ──────────────────────────────── */
+  .calendar-toggle {
+    background: #C7D9DD;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    position: relative;
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+  
+  #toggleViewBtn {
+    background: none;
+    border: none;
+    color: transparent; /* Text unsichtbar – wir nutzen nur das ::before-Icon */
+    font-size: 0;
+    width: 40px;
+    height: 30px;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+  
+  /* Pfeil (CSS-Dreieck) */
+  #toggleViewBtn::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #415E61;
+    transition: transform 0.5s ease;
+  }
+  
+  /* Drehen bei aktivem Wochenmodus */
+  #toggleViewBtn.rotated::before {
+    transform: translateX(-50%) rotate(180deg);
+  }
+  
+  /* ───────────────────────────────
+     DEADLINE-LISTE (unterhalb Kalender)
+  ──────────────────────────────── */
+  .deadline-container {
+    background: #FAF9F8;
+    width: 100%;
+    padding: 20px 16px;
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+  }
+  
+  .deadline-item {
+    margin: 6px 0;
+    background: #C7D9DD;
+    border-radius: 6px;
+    padding: 8px;
+    text-align: left;
+    width: 325px;
+  }
+  
+  /* ───────────────────────────────
+     REITER „Tasks“ / „Schedule“
+  ──────────────────────────────── */
+  .day-tabs {
+    display: flex;
+    width: 100%;
+    height: 55px;
+  }
+  
+  /* Task-Pane (wird via JS gezeigt / versteckt) */
+  .day-tasks {
+    background: #C7D9DD;
+    display: none;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    padding: 30px 24px 30px 50px;
+  }
+  
+  /* Durchgestrichener Text bei erledigter Aufgabe */
+  .task-list input[type="checkbox"]:checked ~ .task-wrap .task-text {
+    text-decoration: line-through;
+    color: #567176;
+  }
+  
+  /* Buttons im Tab-Header */
+  .task-button,
+  .schedule-button {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: #C7D9DD;
+    color: #2f3f41;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  /* Aktiver (Schedule-)Button in dunklerem Ton */
+  .schedule-button {
+    background: #98B3B9;
+  }
+  
+  /* Flex-Verhalten für Listenbereiche */
+  .day-tasks {
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+  }
+  
+  /* Überschrift einer Task-Kategorie */
+  .task-cat {
+    margin: 0 0 18px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #4A646C;
+  }
+  
+  /* Zweiter Abschnitt dupliziert Regeln,
+     sorgt aber für stabile Darstellung
+     auf älteren Geräten / Browsern. */
+  .CalenderScreen {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .day-tasks {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px 28px 90px; /* 90 px = Höhe der unteren Task-Bar */
+    background: #c7d9dd;
+  }
+  
+  .task-cat {
+    margin: 6px 0 12px;
+    font-size: 1.05rem;
+    font-weight: 700;
+  }
+  
+  .task-list li label {
+    gap: 14px; /* Luft zwischen Checkbox & Text */
+  }
+  
+  /* ───────────────────────────────
+     SCHEDULE-PANE (FullCalendar)
+  ──────────────────────────────── */
+  #schedule-view {
+    flex: 1;
+    display: none;          /* per Default unsichtbar */
+    background: #FAF9F8;
+    padding-bottom: 90px;   /* Platz für Task-Bar */
+    padding-top: 10px;
+  }
+  
+  /* Light-Mode für FullCalendar */
+  #schedule-view .fc,
+  #schedule-view .fc-timegrid {
+    background: #FAF9F8;
+    border: 0;
+  }
+  #schedule-view .fc-scrollgrid {
+    border: 0;
+  }
+  
+  /* Feine Stunden-Linien */
+  #schedule-view .fc-timegrid-slot {
+    border-color: #e1e1e1;
+  }
+  
+  /* Weiße Slots */
+  #schedule-view .fc-timegrid-slot,
+  #schedule-view .fc-timegrid-slot-lane {
+    background: #FAF9F8 !important;
+  }
+  
+  /* Alternative Stunde (50 %) – ebenfalls weiß,
+     falls komplett cleanes Layout gewünscht */
+  #schedule-view .fc-timegrid-slot-alt {
+    background: #FAF9F8 !important;
+  }
+  
+  /* Event-Blöcke */
+  .fc-event {
+    border: 2px solid white;
+    color: black !important;
+    font-weight: 500;
+    padding: 2px 6px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.05);
+  }
+  .fc-event-title,
+  .fc-event-time {
+    color: black !important;
+  }
+  
+  /* ───────────────────────────────
+     MODALES DIALOGFENSTER (Neues Event)
+  ──────────────────────────────── */
+  #eventDlg {
+    border: none;           /* Standard-Border ausblenden */
+    outline: none;          /* Safari-Rahmen entfernen */
+    background: transparent;
+  
+    /* Sauber zentrieren */
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #eventDlg .evt-dlg {
+    box-shadow: 0 4px 18px rgba(0,0,0,.10);
+    border: 1px solid #dfe8ea;
+  }
+  
+  /* Einheitliche Inputs */
+  #eventDlg input[type="text"],
+  #eventDlg input[type="date"],
+  #eventDlg input[type="time"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    border: 1px solid #dfe3e5;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 14px;
+    font-family: inherit;
+    appearance: none;
+  }
+  
+  /* Optional: dezenteres Uhren-Icon */
+  #eventDlg input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(35%);
+  }
+  
+  /* Spinner (Chrome) ausblenden */
+  #eventDlg input::-webkit-inner-spin-button,
+  #eventDlg input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* ───────────────────────────────
+     DEADLINE-RINGE IM MONATS-GRID
+  ──────────────────────────────── */
+  .calendar-dates li {
+    position: relative;
+    line-height: 32px; /* gleiche Höhe wie Kreis */
+  }
+  
+  /* Ring-Hintergrund (z.B. für Deadlines) */
+  .calendar-dates li.deadline-ring::before {
+    content: "";
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 30px; height: 30px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: var(--dl-grad, var(--dl-color, #ccc));
+    z-index: -1; /* hinter der Zahl */
+  }
+  
+  /* Weniger Deckkraft, falls Tag zusätzlich
+     „selected“ oder „today“ ist */
+  .calendar-dates li.highlight.deadline-ring::before,
+  .calendar-dates li.active.deadline-ring::before {
+    opacity: .25;
+  }
+  
+  /* Outline-Ring (SVG-Optik) */
+  li.deadline-ring::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    pointer-events: none; /* Klick geht durch */
+    box-sizing: border-box;
+  }
+  #dlDlg{
+    border: none;           /* Standard-Border ausblenden */
+    outline: none;          /* Safari-Rahmen entfernen */
+    background: transparent;
+  
+    /* Sauber zentrieren */
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  

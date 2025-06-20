@@ -1,0 +1,602 @@
+[
+  {
+    "title": "Lecture",
+    "start": "2025-06-19T08:00:00",
+    "end": "2025-06-19T10:00:00",
+    "backgroundColor": "#f0f0f0"
+  },
+  {
+    "title": "Lecture",
+    "start": "2025-06-30T14:00:00",
+    "end": "2025-06-30T15:00:00",
+    "backgroundColor": "#f9f2d9"
+  },
+  {
+    "title": "Lunch with Team",
+    "start": "2025-07-01T14:30:00",
+    "end": "2025-07-01T15:30:00",
+    "backgroundColor": "#ffcccc"
+  },
+  {
+    "title": "Workshop",
+    "start": "2025-07-03T09:30:00",
+    "end": "2025-07-03T10:30:00",
+    "backgroundColor": "#e0ccff"
+  },
+  {
+    "title": "Lecture",
+    "start": "2025-07-01T13:30:00",
+    "end": "2025-07-01T14:30:00",
+    "backgroundColor": "#ffe6cc"
+  },
+  {
+    "title": "Lunch with Team",
+    "start": "2025-06-25T16:30:00",
+    "end": "2025-06-25T17:30:00",
+    "backgroundColor": "#f9d9e0"
+  },
+  {
+    "title": "Lecture",
+    "start": "2025-06-23T08:30:00",
+    "end": "2025-06-23T10:30:00",
+    "backgroundColor": "#d9f9d9"
+  },
+  {
+    "title": "Project Planning",
+    "start": "2025-06-23T15:30:00",
+    "end": "2025-06-23T16:30:00",
+    "backgroundColor": "#ffe6cc"
+  },
+  {
+    "title": "Project Planning",
+    "start": "2025-06-24T14:00:00",
+    "end": "2025-06-24T15:00:00",
+    "backgroundColor": "#ffcccc"
+  },
+  {
+    "title": "Design Session",
+    "start": "2025-07-06T17:30:00",
+    "end": "2025-07-06T18:30:00",
+    "backgroundColor": "#ffe6cc"
+  },
+  {
+    "title": "Gym",
+    "start": "2025-06-30T15:30:00",
+    "end": "2025-06-30T16:30:00",
+    "backgroundColor": "#f0f0f0"
+  },
+  {
+    "title": "Client Call",
+    "start": "2025-06-24T13:30:00",
+    "end": "2025-06-24T14:30:00",
+    "backgroundColor": "#e0ccff"
+  },
+  {
+    "title": "Workshop",
+    "start": "2025-06-22T07:00:00",
+    "end": "2025-06-22T08:00:00",
+    "backgroundColor": "#ffe6cc"
+  },
+  {
+    "title": "Meeting",
+    "start": "2025-07-01T10:00:00",
+    "end": "2025-07-01T12:00:00",
+    "backgroundColor": "#cceeff"
+  },
+  {
+    "title": "Lecture",
+    "start": "2025-07-04T14:30:00",
+    "end": "2025-07-04T15:30:00",
+    "backgroundColor": "#ffe6cc"
+  },
+  {
+    "title": "Code Review",
+    "start": "2025-07-07T07:30:00",
+    "end": "2025-07-07T08:30:00",
+    "backgroundColor": "#e0ccff"
+  },
+  {
+    "title": "Project Planning",
+    "start": "2025-07-02T17:00:00",
+    "end": "2025-07-02T19:00:00",
+    "backgroundColor": "#ccffcc"
+  },
+  {
+    "title": "Client Call",
+    "start": "2025-06-26T18:00:00",
+    "end": "2025-06-26T19:00:00",
+    "backgroundColor": "#f9d9e0"
+  },
+  {
+    "title": "Project Planning",
+    "start": "2025-06-29T10:00:00",
+    "end": "2025-06-29T12:00:00",
+    "backgroundColor": "#f9d9e0"
+  },
+  {
+    "title": "Code Review",
+    "start": "2025-06-23T12:00:00",
+    "end": "2025-06-23T14:00:00",
+    "backgroundColor": "#f9d9e0"
+  },
+  {
+    "title": "Lecture",
+    "start": "2025-06-26T08:00:00",
+    "end": "2025-06-26T10:00:00",
+    "backgroundColor": "#d9f9d9"
+  },
+  {
+    "title": "Project Planning",
+    "start": "2025-06-27T15:30:00",
+    "end": "2025-06-27T17:30:00",
+    "backgroundColor": "#d9e7f9"
+  },
+  {
+    "title": "Design Session",
+    "start": "2025-06-22T15:00:00",
+    "end": "2025-06-22T17:00:00",
+    "backgroundColor": "#e0ccff"
+  },
+  {
+    "title": "Client Call",
+    "start": "2025-07-05T09:30:00",
+    "end": "2025-07-05T10:30:00",
+    "backgroundColor": "#ccffcc"
+  },
+  {
+    "title": "Gym",
+    "start": "2025-06-27T08:00:00",
+    "end": "2025-06-27T10:00:00",
+    "backgroundColor": "#f0f0f0"
+  },
+  {
+    "title": "Design Session",
+    "start": "2025-07-01T13:30:00",
+    "end": "2025-07-01T15:30:00",
+    "backgroundColor": "#e0ccff"
+  },
+  {
+    "title": "Project Planning",
+    "start": "2025-06-26T14:30:00",
+    "end": "2025-06-26T16:30:00",
+    "backgroundColor": "#f0f0f0"
+  },
+  {
+    "title": "Project Planning",
+    "start": "2025-07-03T13:00:00",
+    "end": "2025-07-03T14:00:00",
+    "backgroundColor": "#d9e7f9"
+  },
+  {
+    "title": "Workshop",
+    "start": "2025-07-09T09:30:00",
+    "end": "2025-07-09T10:30:00",
+    "backgroundColor": "#e0ccff"
+  },
+  {
+    "title": "Lunch with Team",
+    "start": "2025-06-28T10:00:00",
+    "end": "2025-06-28T12:00:00",
+    "backgroundColor": "#ffcccc"
+  },
+  {
+    "title": "Code Review",
+    "start": "2025-06-24T08:30:00",
+    "end": "2025-06-24T09:30:00",
+    "backgroundColor": "#f9d9e0"
+  },
+  {
+    "title": "Lunch with Team",
+    "start": "2025-06-23T07:30:00",
+    "end": "2025-06-23T08:30:00",
+    "backgroundColor": "#f0f0f0"
+  },
+  {
+    "title": "Design Session",
+    "start": "2025-06-29T10:30:00",
+    "end": "2025-06-29T12:30:00",
+    "backgroundColor": "#ccffcc"
+  },
+  {
+    "title": "Yoga",
+    "start": "2025-07-03T09:30:00",
+    "end": "2025-07-03T10:30:00",
+    "backgroundColor": "#cceeff"
+  },
+  {
+    "title": "Workshop",
+    "start": "2025-06-25T06:30:00",
+    "end": "2025-06-25T08:30:00",
+    "backgroundColor": "#ffcccc"
+  },
+  {
+    "title": "Lunch with Team",
+    "start": "2025-06-23T12:30:00",
+    "end": "2025-06-23T13:30:00",
+    "backgroundColor": "#cceeff"
+  },
+  {
+    "title": "Gym",
+    "start": "2025-06-29T16:30:00",
+    "end": "2025-06-29T18:30:00",
+    "backgroundColor": "#f0f0f0"
+  },
+  {
+    "title": "Gym",
+    "start": "2025-07-03T10:30:00",
+    "end": "2025-07-03T11:30:00",
+    "backgroundColor": "#ffe6cc"
+  },
+  {
+    "title": "Client Call",
+    "start": "2025-06-25T15:30:00",
+    "end": "2025-06-25T17:30:00",
+    "backgroundColor": "#f9d9e0"
+  },
+  {
+    "title": "Client Call",
+    "start": "2025-07-04T13:00:00",
+    "end": "2025-07-04T14:00:00",
+    "backgroundColor": "#f0f0f0"
+  },
+  {
+    "title": "Gym",
+    "start": "2025-07-07T09:00:00",
+    "end": "2025-07-07T10:00:00",
+    "backgroundColor": "#d9e7f9"
+  },
+  {
+    "title": "Code Review",
+    "start": "2025-06-19T09:00:00",
+    "end": "2025-06-19T11:00:00",
+    "backgroundColor": "#e0ccff"
+  },
+  {
+    "title": "Meeting",
+    "start": "2025-06-28T17:00:00",
+    "end": "2025-06-28T18:00:00",
+    "backgroundColor": "#ffe6cc"
+  },
+  {
+    "title": "Project Planning",
+    "start": "2025-07-04T11:30:00",
+    "end": "2025-07-04T13:30:00",
+    "backgroundColor": "#ffe6cc"
+  },
+  {
+    "title": "Gym",
+    "start": "2025-07-04T17:00:00",
+    "end": "2025-07-04T19:00:00",
+    "backgroundColor": "#d9e7f9"
+  },
+  {
+    "title": "Lunch with Team",
+    "start": "2025-07-02T15:00:00",
+    "end": "2025-07-02T17:00:00",
+    "backgroundColor": "#d9f9d9"
+  },
+  {
+    "title": "Lunch with Team",
+    "start": "2025-07-07T18:00:00",
+    "end": "2025-07-07T19:00:00",
+    "backgroundColor": "#d9f9d9"
+  },
+  {
+    "title": "Code Review",
+    "start": "2025-06-30T11:00:00",
+    "end": "2025-06-30T13:00:00",
+    "backgroundColor": "#f9f2d9"
+  },
+  {
+    "title": "Lunch with Team",
+    "start": "2025-06-26T12:00:00",
+    "end": "2025-06-26T14:00:00",
+    "backgroundColor": "#f9f2d9"
+  },
+  {
+    "title": "Yoga",
+    "start": "2025-06-23T15:00:00",
+    "end": "2025-06-23T16:00:00",
+    "backgroundColor": "#e0ccff"
+  },
+  {
+    "title": "Gym",
+    "start": "2025-07-07T13:00:00",
+    "end": "2025-07-07T14:00:00",
+    "backgroundColor": "#cceeff"
+  },
+  {
+    "title": "Lecture",
+    "start": "2025-06-22T10:30:00",
+    "end": "2025-06-22T12:30:00",
+    "backgroundColor": "#f9d9e0"
+  },
+  {
+    "title": "Workshop",
+    "start": "2025-06-19T14:00:00",
+    "end": "2025-06-19T15:00:00",
+    "backgroundColor": "#f9d9e0"
+  },
+  {
+    "title": "Lecture",
+    "start": "2025-07-01T15:30:00",
+    "end": "2025-07-01T16:30:00",
+    "backgroundColor": "#d9e7f9"
+  },
+  {
+    "title": "Yoga",
+    "start": "2025-06-24T11:00:00",
+    "end": "2025-06-24T12:00:00",
+    "backgroundColor": "#d9e7f9"
+  },
+  {
+    "title": "Lecture",
+    "start": "2025-06-28T14:30:00",
+    "end": "2025-06-28T16:30:00",
+    "backgroundColor": "#cceeff"
+  },
+  {
+    "title": "Design Session",
+    "start": "2025-07-06T08:00:00",
+    "end": "2025-07-06T10:00:00",
+    "backgroundColor": "#f0f0f0"
+  },
+  {
+    "title": "Meeting",
+    "start": "2025-06-26T18:00:00",
+    "end": "2025-06-26T20:00:00",
+    "backgroundColor": "#ffcccc"
+  },
+  {
+    "title": "Lecture",
+    "start": "2025-06-24T06:00:00",
+    "end": "2025-06-24T08:00:00",
+    "backgroundColor": "#cceeff"
+  },
+  {
+    "title": "Design Session",
+    "start": "2025-07-01T06:30:00",
+    "end": "2025-07-01T07:30:00",
+    "backgroundColor": "#d9f9d9"
+  },
+  {
+    "title": "Yoga",
+    "start": "2025-07-02T13:30:00",
+    "end": "2025-07-02T15:30:00",
+    "backgroundColor": "#d9e7f9"
+  },
+  {
+    "title": "Code Review",
+    "start": "2025-07-05T13:00:00",
+    "end": "2025-07-05T15:00:00",
+    "backgroundColor": "#f9d9e0"
+  },
+  {
+    "title": "Client Call",
+    "start": "2025-06-23T13:00:00",
+    "end": "2025-06-23T14:00:00",
+    "backgroundColor": "#f9f2d9"
+  },
+  {
+    "title": "Yoga",
+    "start": "2025-06-26T10:30:00",
+    "end": "2025-06-26T11:30:00",
+    "backgroundColor": "#f0f0f0"
+  },
+  {
+    "title": "Meeting",
+    "start": "2025-06-25T09:00:00",
+    "end": "2025-06-25T11:00:00",
+    "backgroundColor": "#f9f2d9"
+  },
+  {
+    "title": "Client Call",
+    "start": "2025-06-25T12:30:00",
+    "end": "2025-06-25T13:30:00",
+    "backgroundColor": "#d9f9d9"
+  },
+  {
+    "title": "Yoga",
+    "start": "2025-06-22T17:30:00",
+    "end": "2025-06-22T19:30:00",
+    "backgroundColor": "#f9d9e0"
+  },
+  {
+    "title": "Meeting",
+    "start": "2025-07-04T13:00:00",
+    "end": "2025-07-04T15:00:00",
+    "backgroundColor": "#f0f0f0"
+  },
+  {
+    "title": "Gym",
+    "start": "2025-06-29T09:30:00",
+    "end": "2025-06-29T11:30:00",
+    "backgroundColor": "#f9f2d9"
+  },
+  {
+    "title": "Client Call",
+    "start": "2025-07-01T13:30:00",
+    "end": "2025-07-01T14:30:00",
+    "backgroundColor": "#f9d9e0"
+  },
+  {
+    "title": "Yoga",
+    "start": "2025-06-21T10:00:00",
+    "end": "2025-06-21T11:00:00",
+    "backgroundColor": "#e0ccff"
+  },
+  {
+    "title": "Meeting",
+    "start": "2025-06-30T11:00:00",
+    "end": "2025-06-30T12:00:00",
+    "backgroundColor": "#ccffcc"
+  },
+  {
+    "title": "Lunch with Team",
+    "start": "2025-07-07T10:00:00",
+    "end": "2025-07-07T11:00:00",
+    "backgroundColor": "#d9e7f9"
+  },
+  {
+    "title": "Design Session",
+    "start": "2025-06-23T13:30:00",
+    "end": "2025-06-23T15:30:00",
+    "backgroundColor": "#d9f9d9"
+  },
+  {
+    "title": "Workshop",
+    "start": "2025-07-02T13:00:00",
+    "end": "2025-07-02T14:00:00",
+    "backgroundColor": "#f9f2d9"
+  },
+  {
+    "title": "Design Session",
+    "start": "2025-07-08T11:30:00",
+    "end": "2025-07-08T13:30:00",
+    "backgroundColor": "#ffcccc"
+  },
+  {
+    "title": "Yoga",
+    "start": "2025-06-21T08:30:00",
+    "end": "2025-06-21T09:30:00",
+    "backgroundColor": "#cceeff"
+  },
+  {
+    "title": "Design Session",
+    "start": "2025-06-28T11:00:00",
+    "end": "2025-06-28T13:00:00",
+    "backgroundColor": "#d9f9d9"
+  },
+  {
+    "title": "Gym",
+    "start": "2025-06-22T12:00:00",
+    "end": "2025-06-22T13:00:00",
+    "backgroundColor": "#e0ccff"
+  },
+  {
+    "title": "Gym",
+    "start": "2025-07-01T17:30:00",
+    "end": "2025-07-01T19:30:00",
+    "backgroundColor": "#f9f2d9"
+  },
+  {
+    "title": "Design Session",
+    "start": "2025-06-19T13:30:00",
+    "end": "2025-06-19T15:30:00",
+    "backgroundColor": "#ccffcc"
+  },
+  {
+    "title": "Code Review",
+    "start": "2025-07-06T17:00:00",
+    "end": "2025-07-06T18:00:00",
+    "backgroundColor": "#d9e7f9"
+  },
+  {
+    "title": "Lunch with Team",
+    "start": "2025-07-02T16:30:00",
+    "end": "2025-07-02T18:30:00",
+    "backgroundColor": "#ffcccc"
+  },
+  {
+    "title": "Yoga",
+    "start": "2025-07-04T12:00:00",
+    "end": "2025-07-04T14:00:00",
+    "backgroundColor": "#f9d9e0"
+  },
+  {
+    "title": "Lunch with Team",
+    "start": "2025-06-21T16:30:00",
+    "end": "2025-06-21T18:30:00",
+    "backgroundColor": "#f9d9e0"
+  },
+  {
+    "title": "Workshop",
+    "start": "2025-07-04T13:30:00",
+    "end": "2025-07-04T15:30:00",
+    "backgroundColor": "#d9e7f9"
+  },
+  {
+    "title": "Code Review",
+    "start": "2025-07-05T06:00:00",
+    "end": "2025-07-05T08:00:00",
+    "backgroundColor": "#ffcccc"
+  },
+  {
+    "title": "Yoga",
+    "start": "2025-07-08T06:00:00",
+    "end": "2025-07-08T08:00:00",
+    "backgroundColor": "#cceeff"
+  },
+  {
+    "title": "Code Review",
+    "start": "2025-06-26T10:00:00",
+    "end": "2025-06-26T11:00:00",
+    "backgroundColor": "#ffcccc"
+  },
+  {
+    "title": "Project Planning",
+    "start": "2025-06-19T10:00:00",
+    "end": "2025-06-19T12:00:00",
+    "backgroundColor": "#e0ccff"
+  },
+  {
+    "title": "Project Planning",
+    "start": "2025-07-04T06:00:00",
+    "end": "2025-07-04T08:00:00",
+    "backgroundColor": "#ccffcc"
+  },
+  {
+    "title": "Design Session",
+    "start": "2025-07-06T17:00:00",
+    "end": "2025-07-06T18:00:00",
+    "backgroundColor": "#d9f9d9"
+  },
+  {
+    "title": "Lecture",
+    "start": "2025-07-06T09:30:00",
+    "end": "2025-07-06T11:30:00",
+    "backgroundColor": "#d9f9d9"
+  },
+  {
+    "title": "Project Planning",
+    "start": "2025-06-22T15:00:00",
+    "end": "2025-06-22T16:00:00",
+    "backgroundColor": "#f9d9e0"
+  },
+  {
+    "title": "Workshop",
+    "start": "2025-06-29T12:00:00",
+    "end": "2025-06-29T13:00:00",
+    "backgroundColor": "#ffe6cc"
+  },
+  {
+    "title": "Client Call",
+    "start": "2025-06-23T14:00:00",
+    "end": "2025-06-23T15:00:00",
+    "backgroundColor": "#ffcccc"
+  },
+  {
+    "title": "Client Call",
+    "start": "2025-06-29T12:00:00",
+    "end": "2025-06-29T14:00:00",
+    "backgroundColor": "#cceeff"
+  },
+  {
+    "title": "Design Session",
+    "start": "2025-06-22T10:00:00",
+    "end": "2025-06-22T11:00:00",
+    "backgroundColor": "#d9e7f9"
+  },
+  {
+    "title": "Project Planning",
+    "start": "2025-07-06T15:30:00",
+    "end": "2025-07-06T17:30:00",
+    "backgroundColor": "#f9f2d9"
+  },
+  {
+    "title": "Project Planning",
+    "start": "2025-07-06T11:30:00",
+    "end": "2025-07-06T13:30:00",
+    "backgroundColor": "#ffcccc"
+  }
+]

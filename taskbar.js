@@ -7,7 +7,7 @@ class TaskBar extends HTMLElement {
             position:fixed;
             bottom:0;
             left:0;
-            width: 100vw;
+            width: 100%;
             background:#F6F4F2;
             box-shadow:0 -1px 4px rgba(0,0,0,.06);
             display:flex;
@@ -62,4 +62,5 @@ class TaskBar extends HTMLElement {
       });
     }
   }
+
   customElements.define('task-bar', TaskBar);

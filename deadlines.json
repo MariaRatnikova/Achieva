@@ -1,0 +1,24 @@
+{
+    "deadlines": [
+      {"id":"d01","title":"Essay – Digital Marketing","module":"Digital Marketing","date":"2025-07-04","color":"#f4cccc"},   
+      {"id":"d02","title":"Lab 4 – Physics II","module":"Physics II","date":"2025-07-05","color":"#fce5cd"},              
+      {"id":"d03","title":"Report – AI Fundamentals","module":"AI Fundamentals","date":"2025-07-05","color":"#cfe2f3"},   
+      {"id":"d04","title":"Quiz 3 – Calculus","module":"Calculus","date":"2025-07-06","color":"#d9ead3"},                 
+      {"id":"d05","title":"Poster – Graphic Design","module":"Graphic Design","date":"2025-07-07","color":"#d9d2e9"},     
+      {"id":"d06","title":"Sheet 8 – Linear Algebra","module":"Linear Algebra","date":"2025-07-08","color":"#fce5cd"},    
+      {"id":"d07","title":"Presentation – Business Ethics","module":"Business Ethics","date":"2025-07-09","color":"#ead1dc"}, 
+      {"id":"d08","title":"Homework – Networking","module":"Computer Networking","date":"2025-07-09","color":"#d0e0e3"},  
+      {"id":"d09","title":"Mid-term – Calculus","module":"Calculus","date":"2025-07-11","color":"#d9ead3"},               
+      {"id":"d10","title":"Workshop – Digital Marketing","module":"Digital Marketing","date":"2025-07-12","color":"#f4cccc"},
+      {"id":"d11","title":"Group work – Physics II","module":"Physics II","date":"2025-07-13","color":"#fce5cd"},
+      {"id":"d12","title":"Exercise – AI Fundamentals","module":"AI Fundamentals","date":"2025-07-13","color":"#cfe2f3"},
+      {"id":"d13","title":"Portfolio – Graphic Design","module":"Graphic Design","date":"2025-07-14","color":"#d9d2e9"},
+      {"id":"d14","title":"Sheet 9 – Linear Algebra","module":"Linear Algebra","date":"2025-07-14","color":"#fce5cd"},
+      {"id":"d15","title":"Essay – Business Ethics","module":"Business Ethics","date":"2025-07-15","color":"#ead1dc"},
+      {"id":"d16","title":"Lab 5 – Networking","module":"Computer Networking","date":"2025-07-16","color":"#d0e0e3"},
+      {"id":"d17","title":"Final – Calculus","module":"Calculus","date":"2025-07-20","color":"#d9ead3"},
+      {"id":"d18","title":"Campaign plan – Digital Marketing","module":"Digital Marketing","date":"2025-07-21","color":"#f4cccc"},
+      {"id":"d19","title":"Colloquium – Physics II","module":"Physics II","date":"2025-07-22","color":"#fce5cd"},
+      {"id":"d20","title":"Prototype – AI Fundamentals","module":"AI Fundamentals","date":"2025-07-23","color":"#cfe2f3"}
+    ]
+  }

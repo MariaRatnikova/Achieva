@@ -2,195 +2,273 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>Achieva</title>
 
   <!-- Haupt-Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- PWA-Manifest -->
+  <!-- Manifest für PWA -->
   <link rel="manifest" href="manifest.json" />
 
-  <!-- Google-Font Nunito -->
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Google-Schriftart -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- FullCalendar (nur für Schedule-Pane) -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
 </head>
 
 <body>
-  <!-- ───────────────────────────────────────────
-       1) LOGIN-SCREEN  (zu Beginn ausgeblendet)
-  ────────────────────────────────────────────── -->
-  <div id="loginScreen" class="LogIn-screen ">
-    <!-- Logo -->
-    <div class="logo">
-      <img src="images/Log_In/logo.svg" alt="Achieva Logo" />
-    </div>
 
-    <!-- Buttons › Sign up / Log in -->
-    <div class="button-container">
-      <button class="button SignUp">Sign up</button>
-      <button class="button LogIn">Log in</button>
-    </div>
+<!-- ───────────────────────────────────────────
+     1) LOGIN-SCREEN (wird initial angezeigt)
+───────────────────────────────────────────── -->
+<div id="loginScreen" class="LogIn-screen">
+  <div class="logo"><img src="images/Log_In/logo.svg" alt="Achieva Logo"></div>
 
-    <!-- Slogan -->
-    <p class="slogan">Motivated. Organized. Successful</p>
+  <div class="button-container">
+    <button class="button SignUp">Sign up</button>
+    <button class="button LogIn">Log in</button>
   </div>
 
-  <!-- ───────────────────────────────────────────
-       2) START-SCREEN  (ausgeblendet bis Login)
-  ────────────────────────────────────────────── -->
-  <div id="startScreen" class="startScreen hidden">
-    <!-- Top-Bar mit Profilbild und Datum -->
-    <div class="top-bar">
-      <button class="avatar-button">
-        <img src="images/Start_Screen/Profil_button.svg" alt="" />
-      </button>
+  <p class="slogan">Motivated. Organized. Successful</p>
+</div>
 
-      <div class="date-info">
-        <h2 id="dayName">Wednesday</h2>
-        <p  id="fullDate">January&nbsp;12,&nbsp;2025</p>
+<!-- ───────────────────────────────────────────
+     2) START-SCREEN  (nach Login)
+───────────────────────────────────────────── -->
+<div id="startScreen" class="startScreen hidden">
+
+  <!-- Top-Bar -->
+  <div class="top-bar">
+    <button class="avatar-button"><img src="images/Start_Screen/Profil_button.svg" alt=""></button>
+    <div class="date-info">
+      <h2 id="dayName">Wednesday</h2>
+      <p  id="fullDate">January&nbsp;12,&nbsp;2025</p>
+    </div>
+  </div>
+
+  <p class="task-info">
+    <span id="taskCount" class="task-count">0 tasks</span>
+    today – maybe time for a little break?
+  </p>
+
+  <button class="todo-button">Open full To-Do List</button>
+
+  <div class="cat-wrapper"><img src="images/Start_Screen/cat-sun.png" alt=""></div>
+
+  <!-- kleine Vorschau kommender Events -->
+  <div class="events-block">
+    <h3 class="events-title">Upcoming Events</h3>
+
+    <div class="events-card">
+      <div class="event"><img src="images/Start_Screen/book.svg"><span><strong>Software Engineering</strong> • Jul 13</span></div>
+      <div class="event"><img src="images/Start_Screen/bubble.svg"><span><strong>Training</strong> • Aug 13</span></div>
+      <div class="event"><img src="images/Start_Screen/people.svg"><span><strong>Job</strong> • Sep 13</span></div>
+    </div>
+  </div>
+
+  <task-bar></task-bar>
+</div>
+
+<!-- ───────────────────────────────────────────
+     3) TO-DO-SCREEN
+───────────────────────────────────────────── -->
+<div id="todoScreen" class="ToDo-Screen hidden">
+
+  <!-- Top-Bar -->
+  <div class="top-bar">
+    <button class="avatar-button"><img src="images/Start_Screen/Profil_button.svg" alt=""></button>
+    <div class="name-screen"><h2>To Do List</h2></div>
+  </div>
+
+  <!-- dynamischer Board-Container -->
+  <div id="board"></div>
+
+  <button id="addCatBtn" class="add-cat-btn">+ Add Category</button>
+
+  <!-- Floating-Action-Button -->
+  <button id="fabBtnTodo" class="fab">+</button>
+  <div id="fabMenuTodo" class="fab-menu hidden">
+    <button data-action="task">＋ Task</button>
+    <button data-action="cat">＋ Category</button>
+  </div>
+
+  <task-bar></task-bar>
+</div>
+
+<!-- ───────────────────────────────────────────
+     4) CALENDAR-SCREEN  (Month / Week)
+───────────────────────────────────────────── -->
+<div id="calenderScreen" class="CalenderScreen hidden">
+
+  <!-- Top-Bar -->
+  <div class="top-bar">
+    <button class="avatar-button"><img src="images/Start_Screen/Profil_button.svg" alt=""></button>
+     <!-- Anzeige für Monatsansicht -->
+  <div class="name-screen"><h2>Calendar</h2></div>
+
+  <!-- Anzeige für Wochenansicht -->
+  <div class="date-info hidden">
+    <h2 id="weekDayLabel">Monday</h2>
+    <p id="weekDateLabel">7 July 2025</p>
+  </div>
+  </div>
+
+  <!-- Monat- bzw. Wochenkalender -->
+  <div class="calenderBox">
+    <div class="calendar-container">
+      <header class="calendar-header">
+        <p class="calendar-current-date"></p>
+        <div class="calendar-navigation">
+          <span id="calendar-prev">&lt;</span>
+          <span id="calendar-next">&gt;</span>
+        </div>
+      </header>
+
+      <div class="calendar-body">
+        <ul class="calendar-weekdays"><li>Sun</li><li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li></ul>
+        <ul class="calendar-dates"></ul>
       </div>
     </div>
 
-    <!-- Info wie viele Tasks heute -->
-    <p class="task-info">
-      <span id="taskCount" class="task-count">0 tasks</span>
-      today – maybe time for a little break?
-    </p>
+    <div class="calendar-toggle"><button id="toggleViewBtn"></button></div>
+  </div>
 
-    <!-- Button zur To-Do-Liste -->
-    <button class="todo-button">Open full To-Do List</button>
+  <!-- Deadlines & Tabs -->
+  <div class="deadline-container" id="deadlineContainer"><p class="no-deadlines">No deadlines today</p></div>
 
-    <!-- Bild (Katze) -->
-    <div class="cat-wrapper">
-      <img src="images/Start_Screen/cat-sun.png" alt="" />
-    </div>
+  <div class="day-tabs">
+    <button id="btnTasks"    class="task-button active">Tasks</button>
+    <button id="btnSchedule" class="schedule-button">Schedule</button>
+  </div>
 
-    <!-- Block › Upcoming Events -->
-    <div class="events-block">
-      <h3 class="events-title">Upcoming Events</h3>
+  <!-- Liste der Tages-Tasks -->
+  <section id="dayTasks" class="day-tasks"><p class="no-tasks-msg">No tasks today</p></section>
 
-      <div class="events-card">
-        <div class="event">
-          <img src="images/Start_Screen/book.svg" alt="Book icon" />
-          <span><strong>Software Engineering</strong> • July 13</span>
-        </div>
+  <!-- Schedule-Ansicht (FullCalendar) -->
+  <div id="schedule-view" style="display:none;"></div>
 
-        <div class="event">
-          <img src="images/Start_Screen/bubble.svg" alt="Training icon" />
-          <span><strong>Training</strong> • August 13</span>
-        </div>
+  <!-- Globaler FAB (Task / Category / Event) -->
+  <button id="fabBtnCal" class="fab">+</button>
+  <div id="fabMenuCal" class="fab-menu hidden">
+    <button data-action="task">＋ Task</button>
+    <button data-action="event">＋ Event</button>
+    <button data-action="deadline">＋ Deadline</button> 
+  </div>
 
-        <div class="event">
-          <img src="images/Start_Screen/people.svg" alt="Job icon" />
-          <span><strong>Job</strong> • September 13</span>
-        </div>
+  <task-bar></task-bar>
+</div>
 
-        <!-- untere Navigationsleiste -->
-        <task-bar></task-bar>
+<!-- ───────────────────────────────────────────
+     5) MODAL-DIALOGE  (Task / Category / Event)
+───────────────────────────────────────────── -->
+<!-- Task-Dialog -->
+<div id="taskModal" class="modal hidden">
+  <div class="modal-content">
+    <h3 class="modal-title">Got something to plan?</h3>
+    <form id="taskForm">
+      <label><span>Title</span><input id="taskTitle" type="text" required></label>
+      <label><span>Deadline</span><input id="taskDate" type="date" required></label>
+      <label>
+        <span>Category</span>
+        <select id="taskCategory"><option value="">— no category —</option></select>
+      </label>
+      <div class="modal-actions">
+        <button type="button" id="cancelTask" class="modal-btn cancel">Cancel</button>
+        <button type="submit" class="modal-btn create">Create</button>
       </div>
-    </div>
+    </form>
   </div>
+</div>
 
-  <!-- ───────────────────────────────────────────
-       3) TO-DO-SCREEN  (ebenfalls zunächst hidden)
-  ────────────────────────────────────────────── -->
-  <div id="todoScreen" class="ToDo-Screen hidden">
-    <!-- Top-Bar (Titel + Avatar) -->
-    <div class="top-bar">
-      <button class="avatar-button">
-        <img src="images/Start_Screen/Profil_button.svg" alt="" />
-      </button>
-
-      <div class="name-screen">
-        <h2>To Do List</h2>
+<!-- Category-Dialog -->
+<dialog id="catDlg" class="modal hidden">
+  <div class="modal-content">
+    <h3 class="modal-title">Create new category</h3>
+    <form id="catForm" method="dialog">
+      <label><span>Name</span><input id="catName" type="text" required></label>
+      <div class="modal-actions">
+        <button value="cancel"  class="modal-btn cancel">Cancel</button>
+        <button value="default" class="modal-btn create">Create</button>
       </div>
-    </div>
+    </form>
+  </div>
+</dialog>
 
-    <div id="board"></div>
+<!-- Event-Dialog (Schedule) -->
+<dialog id="eventDlg" class="modal hidden">
+  <div class="modal-content evt-dlg"><!-- <— eigene Klasse für Sonder-CSS -->
 
-    <!-- Button › Add Category -->
-    <button id="addCatBtn" class="add-cat-btn">+ Add Category</button>
+    <h3 class="modal-title">Create new event</h3>
 
-    <!-- Floater-Button › großes Plus -->
-    <button id="addTaskBtn" class="fab">+</button>
-    <div id="fabMenu" class="fab-menu hidden">
-      <button data-action="task">＋ Task</button>
-      <button data-action="cat">＋ Category</button>
-    </div>
-    <task-bar></task-bar>
+    <form id="eventForm" method="dialog">
+
+      <!-- Titel: bleibt allein in einer Reihe  -->
+      <label>
+        <span>Title</span>
+        <input id="evTitle" type="text" required>
+      </label>
+
+      <!-- Datum + Uhrzeiten in zwei Spalten ------------------------ -->
+      <div class="row-2">
+        <label>
+          <span>Date</span>
+          <input id="evDate" type="date" required>
+        </label>
+
+        <label>
+          <span>Start</span>
+          <input id="evStart" type="time" required>
+        </label>
+
+        <label>
+          <span>End</span>
+          <input id="evEnd" type="time" required>
+        </label>
+      </div>
+
+      <!-- Footer mit Buttons --------------------------------------- -->
+      <div class="modal-actions">
+        <button value="cancel"  class="modal-btn cancel">Cancel</button>
+        <button value="default" class="modal-btn create">Create</button>
+      </div>
+    </form>
+
   </div>
 
-  <!-- ───────────────────────────────────────────
-       MODAL › Add Task
-  ────────────────────────────────────────────── -->
-  <div id="taskModal" class="modal hidden">
-    <div class="modal-content">
-      <h3 class="modal-title">Got something to plan?</h3>
-
-      <form id="taskForm">
-        <!-- Titel -->
-        <label>
-          <span>Title</span>
-          <input id="taskTitle" type="text" required />
-        </label>
-
-        <!-- Deadline -->
-        <label>
-          <span>Deadline</span>
-          <div class="deadline-wrap">
-            <input id="taskDate" type="date" required />
-          </div>
-        </label>
-
-        <!-- Kategorie -->
-        <label>
-          <span>Category</span>
-          <select id="taskCategory">
-            <option value="" disabled selected>Select category</option>
-            <option>Software Engineering</option>
-            <option>Home</option>
-            <option>Sport</option>
-          </select>
-        </label>
-
-        <!-- Action-Buttons -->
-        <div class="modal-actions">
-          <button type="button" id="cancelTask" class="modal-btn cancel">Cancel</button>
-          <button type="submit" class="modal-btn create">Create</button>
-        </div>
-      </form>
-    </div>
-    
+<!-- Deadline-Dialog -->
+</dialog>
+<dialog id="dlDlg" class="modal hidden">
+  <div class="modal-content">
+    <h3 class="modal-title">Add new deadline</h3>
+    <form id="dlForm" method="dialog">
+      <label><span>Title</span><input id="dlTitle" type="text" required></label>
+      <label><span>Module</span>
+        <select id="dlModule">
+          <option>Digital Marketing</option><option>Physics II</option>
+          <option>AI Fundamentals</option><option>Calculus</option>
+          <option>Graphic Design</option><option>Linear Algebra</option>
+          <option>Business Ethics</option><option>Computer Networking</option>
+        </select>
+      </label>
+      <label><span>Date</span><input id="dlDate" type="date" required></label>
+      <label><span>Color</span>
+        <input id="dlColor" type="color" value="#fd9679">
+      </label>
+      <div class="modal-actions">
+        <button value="cancel"  class="modal-btn cancel">Cancel</button>
+        <button value="default" class="modal-btn create">Create</button>
+      </div>
+    </form>
   </div>
-
-  <!-- ───────────────────────────────────────────
-       MODAL › Add Category
-  ────────────────────────────────────────────── -->
-  <dialog id="catDlg" class="modal hidden">
-    <div class="modal-content">
-      <h3 class="modal-title">Create new category</h3>
-
-      <form id="catForm" method="dialog">
-        <label>
-          <span>Name</span>
-          <input id="catName" type="text" placeholder="e.g. Finance" required />
-        </label>
-
-        <div class="modal-actions">
-          <button value="cancel"  class="modal-btn cancel">Cancel</button>
-          <button value="default" class="modal-btn create">Create</button>
-        </div>
-      </form>
-    </div>
-  </dialog>
-
-  <!-- ───────────────────────────────────────────
-       SCRIPTS
-  ────────────────────────────────────────────── -->
-  <script type="module" src="script.js"></script>
-  <script type="module" src="taskbar.js"></script>
-
-  <!-- Task-Bar-Komponente am Ende der Seite laden -->
- 
+</dialog>
+<!-- ───────────────────────────────────────────
+     6) SCRIPTS (einmalig, am Ende des Body)
+───────────────────────────────────────────── -->
+<script src="script.js"></script>
+<script src="taskbar.js"></script>
 </body>
 </html>
