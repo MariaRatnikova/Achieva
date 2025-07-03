@@ -796,3 +796,29 @@ function refreshDeadlines(){
       9) Initialer Kalender-Render (Monatsansicht)
       ============================================================= */
    renderCalendar();   // sofort beim ersten Laden
+
+// Navigation in der Taskbar
+document.addEventListener('DOMContentLoaded', () => {
+    const screens = {
+        home:    document.getElementById('startScreen'),
+        modules: document.getElementById('modulesScreen'),
+        calendar: document.getElementById('calendarScreen'), // falls vorhanden
+        uploads: document.getElementById('uploadScreen')     // falls vorhanden
+    };
+
+    const navItems = document.querySelectorAll('.nav-item');
+
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const target = item.dataset.page;
+
+            // Alle Screens verstecken
+            Object.values(screens).forEach(screen => {
+                if (screen) screen.classList.add('hidden');
+            });
+
+            // Gewünschten Screen anzeigen
+            if (screens[target]) screens[target].classList.remove('hidden');
+        });
+    });
+});

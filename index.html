@@ -99,6 +99,88 @@
   <task-bar></task-bar>
 </div>
 
+<!-- MODULES-SCREEN  -->
+<div id="modulesScreen" class="Modules-Screen hidden">
+  <!-- Top-Bereich mit Titel und Illustration -->
+  <div class="top-bar">
+    <button class="avatar-button">
+      <img src="images/Start_Screen/Profil_button.svg" alt="Profil Icon" />
+    </button>
+    <div class="name-screen">
+      <h2 class="screen-title">Modules</h2>
+    </div>
+  </div>
+
+  <div class="module-intro">
+    <p class="module-subline">Organize your modules, track progress and stay on top.</p>
+    <img src="images/Start_Screen/cat-sun.png" alt="Module Cat" class="module-cat-img" />
+
+  </div>
+  <button class="add-module-btn">+ Add Module</button>
+
+  <!-- Sortiermenü -->
+  <div class="sort-wrap" id="sortToggle">
+    <span>Sort &#x25BC;</span>
+  </div>
+  <ul class="sort-dropdown hidden" id="sortMenu">
+    <li>Priority</li>
+    <li>Recently Added</li>
+    <li>Least Recently Studied</li>
+    <li>Upcoming</li>
+  </ul>
+
+  <!-- Modul-Karten -->
+  <div class="module-list">
+    <div class="module-card color-high">
+      <div class="module-info">
+        <h3>Software Engineering</h3>
+        <span class="priority-label high">high priority</span>
+        <p class="meta">Created: 30 mins ago</p>
+        <p class="meta">Deadline: 13.06.2025</p>
+      </div>
+      <div class="module-progress">
+        <div class="circle">
+          <span>1 / 10</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="module-card color-medium">
+      <div class="module-info">
+        <h3>Webprogrammierung</h3>
+        <span class="priority-label medium">medium priority</span>
+        <p class="meta">Created: 2 weeks ago</p>
+        <p class="meta">Deadline: 06.06.2025</p>
+      </div>
+      <div class="module-progress">
+        <div class="circle">
+          <span>3 / 5</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="module-card color-optional">
+      <div class="module-info">
+        <h3>Geo</h3>
+        <span class="priority-label optional">optional</span>
+        <p class="meta">Created: 6 weeks ago</p>
+        <p class="meta">Deadline: 01.07.2025</p>
+      </div>
+      <div class="module-progress">
+        <div class="circle">
+          <span>1 / 10</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Taskbar -->
+  <task-bar></task-bar>
+</div>
+
+
+
+
 <!-- ───────────────────────────────────────────
      4) CALENDAR-SCREEN  (Month / Week)
 ───────────────────────────────────────────── -->
